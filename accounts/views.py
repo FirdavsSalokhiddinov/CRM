@@ -158,7 +158,7 @@ def createOrder(request, pk):
     context = {
         'formset': formset
     }
-    return render(request, 'accounts\order_form.html', context)
+    return render(request, 'accounts/order_form.html', context)
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
@@ -176,7 +176,7 @@ def updateOrder(request, pk):
     context = {
         'form': form
     }
-    return render(request, 'accounts\order_form.html', context)
+    return render(request, 'accounts/order_form.html', context)
 
 @login_required(login_url='login')
 @allowed_users(allowed_roles=['admin'])
